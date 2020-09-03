@@ -14,6 +14,10 @@ class ArticlesTable extends Table {
 
     public function initialize(array $config) {
         $this->addBehavior('Timestamp');
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
 // Add the following method.

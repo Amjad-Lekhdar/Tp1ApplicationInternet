@@ -6,9 +6,31 @@ namespace App\Controller;
 
 class ArticlesController extends AppController {
 
+    public function isAuthorized($user) {
+        $action = $this->request->getParam('action');
+        // The add and tags actions are always allowed to logged in users.
+        if (in_array($action, ['add', 'tags'])) {
+            return true;
+        }
+
+        // All other actions require a slug.
+        $slug = $this->request->getParam('pass.0');
+        if (!$slug) {
+            return false;
+        }
+
+        // Check that the article belongs to the current user.
+        $article = $this->Articles->findBySlug($slug)->first();
+
+        return $article->user_id === $user['id'];
+    }
+
     public function index() {
         $this->loadComponent('Paginator');
-        $articles = $this->Paginator->paginate($this->Articles->find());
+        $articles = $this->Paginator->paginate($this->Articles->find(
+            'all', [
+            'contain' => ['Users'],
+        ]));
         $this->set(compact('articles'));
     }
 
@@ -28,7 +50,7 @@ class ArticlesController extends AppController {
 
             // Hardcoding the user_id is temporary, and will be removed later
             // when we build authentication out.
-            $article->user_id = 1;
+            $article->$this->Auth->user('id');
 
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Your article has been saved.'));
@@ -45,7 +67,10 @@ class ArticlesController extends AppController {
     public function edit($slug) {
         $article = $this->Articles->findBySlug($slug)->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
-            $this->Articles->patchEntity($article, $this->request->getData());
+            $this->Articles->patchEntity($article, $this->request->getData(), [
+                // Added: Disable modification of user_id.
+                'accessibleFields' => ['user_id' => false]
+            ]);
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Your article has been updated.'));
                 return $this->redirect(['action' => 'index']);

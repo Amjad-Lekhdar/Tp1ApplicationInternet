@@ -6,6 +6,7 @@
     <tr>
         <th>Title</th>
         <th>Created</th>
+        <th>By</th>
         <th>Action</th>
     </tr>
 
@@ -18,6 +19,9 @@
         </td>
         <td>
             <?= $article->created->format(DATE_RFC850) ?>
+        </td>
+        <td>
+            <?= $this->Html->link($article->user->email, ['controller' => 'users', 'action' => 'view', $article->user_id])?>
         </td>
         <td>
             <?= $this->Html->link('Edit', ['action' => 'edit', $article->slug]) ?>
