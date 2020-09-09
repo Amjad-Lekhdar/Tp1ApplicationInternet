@@ -18,6 +18,9 @@ class ArticlesTable extends Table {
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->hasMany('Comments', [
+            'foreignKey' => 'article_id',
+        ]);
     }
 
 // Add the following method.

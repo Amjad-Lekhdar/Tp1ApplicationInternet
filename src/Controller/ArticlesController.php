@@ -28,8 +28,8 @@ class ArticlesController extends AppController {
     public function index() {
         $this->loadComponent('Paginator');
         $articles = $this->Paginator->paginate($this->Articles->find(
-            'all', [
-            'contain' => ['Users'],
+                        'all', [
+                    'contain' => ['Users'],
         ]));
         $this->set(compact('articles'));
     }
@@ -37,8 +37,12 @@ class ArticlesController extends AppController {
     // Add to existing src/Controller/ArticlesController.php file
 
     public function view($slug = null) {
-        $article = $this->Articles->findBySlug($slug)->firstOrFail();
-////        debug($article);
+        $article = $this->Articles->find()
+                ->where(['Articles.slug' => $slug])
+                ->contain(['Comments'])
+                ->firstOrFail();
+//        $article = $this->Articles->findBySlug($slug)->firstOrFail();
+//        debug($article);
 //       die();
         $this->set(compact('article'));
     }
