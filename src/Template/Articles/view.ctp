@@ -6,6 +6,7 @@
 <p><?= $this->Html->link('Edit', ['action' => 'edit', $article->slug]) ?></p>
 <p><?php
     $this->request->session()->write('Article.id', $article->id);
+    $this->request->session()->write('Article.slug', $article->slug);
     echo $this->Html->link(__('New Comment'), ['controller' => 'Comments', 'action' => 'add']);
     ?></p>
 <div class="related">

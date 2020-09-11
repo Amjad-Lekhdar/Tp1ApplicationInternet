@@ -65,8 +65,8 @@ class CommentsController extends AppController {
 //            debug($comment); die();
                 if ($this->Comments->save($comment)) {
                     $this->Flash->success(__('The comment has been saved.'));
-
-                    return $this->redirect(['action' => 'index']);
+                    $article_slug = $this->request->session()->read('Article.slug');
+                    return $this->redirect(['controller' => 'articles', 'action' => 'view', $article_slug]);
                 }
                 $this->Flash->error(__('The comment could not be saved. Please, try again.'));
             }

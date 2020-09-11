@@ -796,3 +796,184 @@
 2020-09-09 22:06:53 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'articles'
 2020-09-09 22:06:53 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
 2020-09-09 22:06:53 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 22:50:35 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `articles`
+2020-09-09 22:50:35 Debug: duration=2 rows=3 SHOW INDEXES FROM `articles`
+2020-09-09 22:50:35 Debug: duration=14 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'articles' AND rc.TABLE_NAME = 'articles'
+2020-09-09 22:50:35 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'articles'
+2020-09-09 22:50:35 Debug: duration=2 rows=5 SHOW FULL COLUMNS FROM `users`
+2020-09-09 22:50:35 Debug: duration=2 rows=1 SHOW INDEXES FROM `users`
+2020-09-09 22:50:35 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-09-09 22:50:35 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-09-09 22:50:35 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
+2020-09-09 22:50:35 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 22:55:28 Debug: duration=3 rows=5 SHOW FULL COLUMNS FROM `users`
+2020-09-09 22:55:28 Debug: duration=5 rows=1 SHOW INDEXES FROM `users`
+2020-09-09 22:55:28 Debug: duration=15 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-09-09 22:55:28 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-09-09 22:55:28 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM users Users WHERE Users.email = 'admin@admin.com' LIMIT 1
+2020-09-09 22:55:29 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `articles`
+2020-09-09 22:55:29 Debug: duration=3 rows=3 SHOW INDEXES FROM `articles`
+2020-09-09 22:55:29 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'articles' AND rc.TABLE_NAME = 'articles'
+2020-09-09 22:55:29 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'articles'
+2020-09-09 22:55:29 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
+2020-09-09 22:55:29 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 22:55:43 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM users Users WHERE Users.email = 'admin@admin.com' LIMIT 1
+2020-09-09 22:55:43 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
+2020-09-09 22:55:43 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 22:55:54 Debug: duration=3 rows=6 SHOW FULL COLUMNS FROM `comments`
+2020-09-09 22:55:54 Debug: duration=2 rows=2 SHOW INDEXES FROM `comments`
+2020-09-09 22:55:54 Debug: duration=14 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'comments' AND rc.TABLE_NAME = 'comments'
+2020-09-09 22:55:54 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'comments'
+2020-09-09 22:55:54 Debug: duration=1 rows=1 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = 'essai-slug' LIMIT 1
+2020-09-09 22:55:54 Debug: duration=1 rows=0 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified` FROM comments Comments WHERE Comments.article_id in (2)
+2020-09-09 22:56:05 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.title AS `Articles__title` FROM articles Articles LIMIT 200
+2020-09-09 22:56:45 Debug: duration=0 rows=0 BEGIN
+2020-09-09 22:56:45 Debug: duration=1 rows=1 SELECT 1 AS `existing` FROM articles Articles WHERE Articles.id = 2 LIMIT 1
+2020-09-09 22:56:45 Debug: duration=2 rows=1 INSERT INTO comments (article_id, name, comment, created, modified) VALUES (2, 'Eux', 'Leur commentaire sur le slug', '2020-09-09 22:56:45', '2020-09-09 22:56:45')
+2020-09-09 22:56:45 Debug: duration=0 rows=0 COMMIT
+2020-09-09 22:56:46 Debug: duration=1 rows=5 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified`, Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM comments Comments INNER JOIN articles Articles ON Articles.id = (Comments.article_id) LIMIT 20 OFFSET 0
+2020-09-09 22:56:46 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM comments Comments INNER JOIN articles Articles ON Articles.id = (Comments.article_id)
+2020-09-09 23:00:24 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `articles`
+2020-09-09 23:00:24 Debug: duration=3 rows=3 SHOW INDEXES FROM `articles`
+2020-09-09 23:00:24 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'articles' AND rc.TABLE_NAME = 'articles'
+2020-09-09 23:00:24 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'articles'
+2020-09-09 23:00:24 Debug: duration=2 rows=5 SHOW FULL COLUMNS FROM `users`
+2020-09-09 23:00:24 Debug: duration=2 rows=1 SHOW INDEXES FROM `users`
+2020-09-09 23:00:24 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-09-09 23:00:24 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-09-09 23:00:24 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
+2020-09-09 23:00:24 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 23:00:29 Debug: duration=3 rows=6 SHOW FULL COLUMNS FROM `comments`
+2020-09-09 23:00:29 Debug: duration=3 rows=2 SHOW INDEXES FROM `comments`
+2020-09-09 23:00:29 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'comments' AND rc.TABLE_NAME = 'comments'
+2020-09-09 23:00:29 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'comments'
+2020-09-09 23:00:29 Debug: duration=1 rows=1 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = 'essai-slug' LIMIT 1
+2020-09-09 23:00:29 Debug: duration=1 rows=1 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified` FROM comments Comments WHERE Comments.article_id in (2)
+2020-09-09 23:00:34 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.title AS `Articles__title` FROM articles Articles LIMIT 200
+2020-09-09 23:01:22 Debug: duration=0 rows=0 BEGIN
+2020-09-09 23:01:22 Debug: duration=1 rows=1 SELECT 1 AS `existing` FROM articles Articles WHERE Articles.id = 2 LIMIT 1
+2020-09-09 23:01:22 Debug: duration=2 rows=1 INSERT INTO comments (article_id, name, comment, created, modified) VALUES (2, 'en vidéo', 'Redirection vers l''article après un ajout', '2020-09-09 23:01:22', '2020-09-09 23:01:22')
+2020-09-09 23:01:22 Debug: duration=0 rows=0 COMMIT
+2020-09-09 23:01:23 Debug: duration=1 rows=0 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = NULL LIMIT 1
+2020-09-09 23:01:57 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
+2020-09-09 23:01:57 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 23:02:07 Debug: duration=2 rows=1 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = 'ticourt-plus-long' LIMIT 1
+2020-09-09 23:02:07 Debug: duration=1 rows=1 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified` FROM comments Comments WHERE Comments.article_id in (4)
+2020-09-09 23:02:11 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.title AS `Articles__title` FROM articles Articles LIMIT 200
+2020-09-09 23:02:41 Debug: duration=2 rows=6 SHOW FULL COLUMNS FROM `comments`
+2020-09-09 23:02:41 Debug: duration=4 rows=2 SHOW INDEXES FROM `comments`
+2020-09-09 23:02:41 Debug: duration=16 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'comments' AND rc.TABLE_NAME = 'comments'
+2020-09-09 23:02:41 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'comments'
+2020-09-09 23:02:41 Debug: duration=0 rows=0 BEGIN
+2020-09-09 23:02:41 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `articles`
+2020-09-09 23:02:41 Debug: duration=4 rows=3 SHOW INDEXES FROM `articles`
+2020-09-09 23:02:41 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'articles' AND rc.TABLE_NAME = 'articles'
+2020-09-09 23:02:41 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'articles'
+2020-09-09 23:02:41 Debug: duration=1 rows=1 SELECT 1 AS `existing` FROM articles Articles WHERE Articles.id = 4 LIMIT 1
+2020-09-09 23:02:41 Debug: duration=1 rows=1 INSERT INTO comments (article_id, name, comment, created, modified) VALUES (4, 'en vidéo', 'Ajout et redirection  vers ticourt', '2020-09-09 23:02:41', '2020-09-09 23:02:41')
+2020-09-09 23:02:41 Debug: duration=0 rows=0 COMMIT
+2020-09-09 23:02:41 Debug: duration=1 rows=1 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = 'ticourt-plus-long' LIMIT 1
+2020-09-09 23:02:41 Debug: duration=1 rows=2 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified` FROM comments Comments WHERE Comments.article_id in (4)
+2020-09-09 23:03:03 Debug: duration=3 rows=5 SHOW FULL COLUMNS FROM `users`
+2020-09-09 23:03:03 Debug: duration=2 rows=1 SHOW INDEXES FROM `users`
+2020-09-09 23:03:03 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-09-09 23:03:03 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-09-09 23:03:03 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified`, Users.id AS `Users__id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id) LIMIT 20 OFFSET 0
+2020-09-09 23:03:03 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM articles Articles INNER JOIN users Users ON Users.id = (Articles.user_id)
+2020-09-09 23:04:25 Debug: duration=1 rows=1 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = 'first-post' LIMIT 1
+2020-09-09 23:04:25 Debug: duration=1 rows=3 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified` FROM comments Comments WHERE Comments.article_id in (1)
+2020-09-09 23:05:33 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `articles`
+2020-09-09 23:05:33 Debug: duration=4 rows=3 SHOW INDEXES FROM `articles`
+2020-09-09 23:05:33 Debug: duration=15 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'articles' AND rc.TABLE_NAME = 'articles'
+2020-09-09 23:05:33 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'articles'
+2020-09-09 23:05:33 Debug: duration=2 rows=6 SHOW FULL COLUMNS FROM `comments`
+2020-09-09 23:05:33 Debug: duration=3 rows=2 SHOW INDEXES FROM `comments`
+2020-09-09 23:05:33 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cakecmstuto_v0_2_1' AND kcu.TABLE_NAME = 'comments' AND rc.TABLE_NAME = 'comments'
+2020-09-09 23:05:33 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'comments'
+2020-09-09 23:05:33 Debug: duration=1 rows=3 SELECT Articles.id AS `Articles__id`, Articles.title AS `Articles__title` FROM articles Articles LIMIT 200
+2020-09-09 23:05:58 Debug: duration=0 rows=0 BEGIN
+2020-09-09 23:05:58 Debug: duration=0 rows=1 SELECT 1 AS `existing` FROM articles Articles WHERE Articles.id = 1 LIMIT 1
+2020-09-09 23:05:58 Debug: duration=2 rows=1 INSERT INTO comments (article_id, name, comment, created, modified) VALUES (1, 'en vidéo', 'Ajout commentaire à first post', '2020-09-09 23:05:58', '2020-09-09 23:05:58')
+2020-09-09 23:05:58 Debug: duration=0 rows=0 COMMIT
+2020-09-09 23:05:59 Debug: duration=1 rows=1 SELECT Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM articles Articles WHERE Articles.slug = 'first-post' LIMIT 1
+2020-09-09 23:05:59 Debug: duration=1 rows=4 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified` FROM comments Comments WHERE Comments.article_id in (1)
+2020-09-09 23:06:11 Debug: duration=1 rows=8 SELECT Comments.id AS `Comments__id`, Comments.article_id AS `Comments__article_id`, Comments.name AS `Comments__name`, Comments.comment AS `Comments__comment`, Comments.created AS `Comments__created`, Comments.modified AS `Comments__modified`, Articles.id AS `Articles__id`, Articles.user_id AS `Articles__user_id`, Articles.title AS `Articles__title`, Articles.slug AS `Articles__slug`, Articles.body AS `Articles__body`, Articles.published AS `Articles__published`, Articles.created AS `Articles__created`, Articles.modified AS `Articles__modified` FROM comments Comments INNER JOIN articles Articles ON Articles.id = (Comments.article_id) LIMIT 20 OFFSET 0
+2020-09-09 23:06:11 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM comments Comments INNER JOIN articles Articles ON Articles.id = (Comments.article_id)
