@@ -18,6 +18,10 @@ class CommentsController extends AppController {
         $this->Auth->allow(['add']);
     }
 
+    public function isAuthorized($user) {
+        return true;
+    }
+
     /**
      * Index method
      *

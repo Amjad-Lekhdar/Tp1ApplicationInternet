@@ -33,7 +33,7 @@ class CommentsTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
-
+        $this->addBehavior('Translate', ['fields' => ['name', 'comment']]);
         $this->setTable('comments');
         $this->setDisplayField('name');
 

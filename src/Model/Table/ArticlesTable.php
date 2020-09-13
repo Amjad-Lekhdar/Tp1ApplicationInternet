@@ -13,6 +13,8 @@ use Cake\Validation\Validator;
 class ArticlesTable extends Table {
 
     public function initialize(array $config) {
+        parent::initialize($config);
+        $this->addBehavior('Translate', ['fields' => ['title', 'body']]);
         $this->addBehavior('Timestamp');
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',

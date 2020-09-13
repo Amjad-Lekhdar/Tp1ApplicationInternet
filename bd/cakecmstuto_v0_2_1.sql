@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 11, 2020 at 06:21 PM
+-- Generation Time: Sep 13, 2020 at 10:35 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -44,7 +44,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `user_id`, `title`, `slug`, `body`, `published`, `created`, `modified`) VALUES
-(1, 1, 'First Post', 'first-post', 'This is the first post.', 1, '2020-08-30 12:25:57', '2020-08-30 12:25:57'),
+(1, 1, 'First post en_US', 'first-post', 'This is the first post! en_US', 1, '2020-08-30 12:25:57', '2020-09-13 21:50:20'),
 (2, 1, 'Essai de slug', 'essai-slug', 'Voici un article pour tester le slug', 0, '2020-08-30 00:00:00', '2020-08-30 00:00:00'),
 (4, 1, 'ticourt plus long', 'ticourt-plus-long', 'correct plus long', 0, '2020-08-30 22:16:39', '2020-08-30 22:16:39');
 
@@ -79,14 +79,45 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `article_id`, `name`, `comment`, `created`, `modified`) VALUES
-(1, 1, 'Moi', 'Bravo pour le \"first post\"!', '2020-09-09 00:00:00', '2020-09-09 00:00:00'),
-(2, 1, 'toi', 'ton commentaire à first post', '2020-09-09 21:36:02', '2020-09-09 21:36:02'),
+(1, 1, 'Me', 'Congrats for the first post! EN', '2020-09-09 00:00:00', '2020-09-13 21:48:18'),
+(2, 1, 'you', 'your comment', '2020-09-09 21:36:02', '2020-09-13 21:52:03'),
 (3, 1, 'lui', 'Son commentaire sur le first post', '2020-09-09 21:48:08', '2020-09-09 21:48:08'),
 (4, 4, 'nous', 'notre commentaire sur ticourt', '2020-09-09 21:48:44', '2020-09-09 21:48:44'),
 (5, 2, 'Eux', 'Leur commentaire sur le slug', '2020-09-09 22:56:45', '2020-09-09 22:56:45'),
 (6, 2, 'en vidéo', 'Redirection vers l\'article après un ajout', '2020-09-09 23:01:22', '2020-09-09 23:01:22'),
 (7, 4, 'en vidéo', 'Ajout et redirection  vers ticourt', '2020-09-09 23:02:41', '2020-09-09 23:02:41'),
 (8, 1, 'en vidéo', 'Ajout commentaire à first post', '2020-09-09 23:05:58', '2020-09-09 23:05:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `i18n`
+--
+
+CREATE TABLE `i18n` (
+  `id` int(11) NOT NULL,
+  `locale` varchar(6) COLLATE utf8mb4_general_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `foreign_key` int(10) NOT NULL,
+  `field` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` text COLLATE utf8mb4_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `i18n`
+--
+
+INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
+(1, 'en_US', 'Comments', 1, 'name', 'Me'),
+(2, 'en_US', 'Comments', 1, 'comment', 'Congrats for the first post!'),
+(3, 'en_US', 'Articles', 1, 'title', 'First post'),
+(4, 'en_US', 'Articles', 1, 'body', 'This is the first post'),
+(5, 'fr_CA', 'Comments', 1, 'name', 'Moi fr_CA'),
+(6, 'fr_CA', 'Comments', 1, 'comment', 'Félicitations pour le premier article! fr_CA'),
+(7, 'fr_CA', 'Articles', 1, 'title', 'Premier article fr_CA'),
+(8, 'fr_CA', 'Articles', 1, 'body', 'Voici le premier article fr_CA'),
+(9, 'fr_CA', 'Comments', 2, 'name', 'Toi fr_CA'),
+(10, 'fr_CA', 'Comments', 2, 'comment', 'Ton commentaire fr_CA');
 
 -- --------------------------------------------------------
 
@@ -150,6 +181,14 @@ ALTER TABLE `comments`
   ADD KEY `article_comments_fk` (`article_id`);
 
 --
+-- Indexes for table `i18n`
+--
+ALTER TABLE `i18n`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `I18N_LOCALE_FIELD` (`locale`,`model`,`foreign_key`,`field`),
+  ADD KEY `I18N_FIELD` (`model`,`foreign_key`,`field`);
+
+--
 -- Indexes for table `tags`
 --
 ALTER TABLE `tags`
@@ -177,6 +216,12 @@ ALTER TABLE `articles`
 --
 ALTER TABLE `comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `i18n`
+--
+ALTER TABLE `i18n`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tags`
