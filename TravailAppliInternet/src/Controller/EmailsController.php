@@ -6,7 +6,7 @@
    class EmailsController extends AppController{
       public function index(){
          $email = new Email('default');
-         $email->to('1804139@cmontmorency.qc.ca')->subject('Essai de CakePHP Mailer')->send('Vous pourriez construire un lien de confirmation ici');
+         $email->to('amjadlekhdar@gmail.com')->subject('Essai de CakePHP Mailer')->send('Vous pourriez construire un lien de confirmation ici');
       }
    }
 ?>

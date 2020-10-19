@@ -222,7 +222,7 @@ return [
         'davmail' => [
             'host' => 'localhost',
             'port' => 1025,
-            'username' => '1804139A@cmontmorency.qc.ca',
+            'username' => '1804139@cmontmorency.qc.ca',
             'password' => '73j28M7',
             'className' => 'Smtp'
         ],
@@ -230,7 +230,7 @@ return [
             'host' => 'ssl://smtp.gmail.com',
             'port' => 465,
             'username' => 'amjadlekhdar@gmail.com',
-            'password' => 'amjad2000',
+            'password' => 'Test1234!',
             'className' => 'Smtp'
         ]
     ],
@@ -246,8 +246,8 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'default',
-            'from' => 'you@localhost',
+            'transport' => 'gmail',
+            'from' => 'amjadlekhdar@gmail.com',
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
              */

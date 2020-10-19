@@ -1,4 +1,4 @@
-<?php $titre = 'Les horaires des employés version 1.0.0.1'; ?>
+
 
 <ul>
     <li>Amjad Lekhdar</li>
@@ -36,7 +36,7 @@
     <tr>
         <td>
             <h4>Base de données utilisée par l'application :</h4>
-            <img src="bd/Capture.png" alt="" height="600" width="800"/><br/>
+            <img src="webroot/img/Capture.png" alt="" height="600" width="800"/><br/>
 							
                 
             </object><br/>
@@ -46,7 +46,7 @@
         <td>
             <h4>Basé sur ce modèle original :</h4>
             <a href="http://www.databaseanswers.org/data_models/employees_schedules/index.htm" >
-                <img src="bd/employeeschedule.png" alt=""/><br/>
+                <img src="webroot/img/employeeschedule.png" alt=""/><br/>
                 Blog as a "Real Life example :</a>
         </td>
     </tr>
