@@ -1,0 +1,767 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-10-19 15:34+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/EmployeesController.php:58
+msgid "The employee has been saved"
+msgstr ""
+
+#: Controller/EmployeesController.php:61
+#: Controller/EmployeesController.php:81
+msgid "The employee could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/EmployeesController.php:78
+msgid "The employee has been saved."
+msgstr ""
+
+#: Controller/EmployeesController.php:94
+msgid "The employee {0} as been deleted."
+msgstr ""
+
+#: Controller/EmployeesController.php:97
+msgid "The employee could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/FilesController.php:69
+msgid "File has been uploaded and inserted successfully."
+msgstr ""
+
+#: Controller/FilesController.php:73
+#: Controller/FilesController.php:76
+msgid "Unable to upload file, please try again."
+msgstr ""
+
+#: Controller/FilesController.php:79
+msgid "Please choose a file to upload."
+msgstr ""
+
+#: Controller/FilesController.php:102
+msgid "The file has been saved."
+msgstr ""
+
+#: Controller/FilesController.php:106
+msgid "The file could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/FilesController.php:124
+msgid "The file has been deleted."
+msgstr ""
+
+#: Controller/FilesController.php:126
+msgid "The file could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RolesController.php:68
+#: Controller/RolesController.php:97
+msgid "The role has been saved."
+msgstr ""
+
+#: Controller/RolesController.php:73
+#: Controller/RolesController.php:101
+msgid "The role could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RolesController.php:119
+msgid "The role has been deleted."
+msgstr ""
+
+#: Controller/RolesController.php:121
+msgid "The role could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/SchedulesController.php:73
+#: Controller/SchedulesController.php:100
+msgid "The schedule has been saved."
+msgstr ""
+
+#: Controller/SchedulesController.php:77
+#: Controller/SchedulesController.php:104
+msgid "The schedule could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/SchedulesController.php:121
+msgid "The schedule has been deleted."
+msgstr ""
+
+#: Controller/SchedulesController.php:123
+msgid "The schedule could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/StatutController.php:54
+#: Controller/StatutController.php:78
+msgid "The statut has been saved."
+msgstr ""
+
+#: Controller/StatutController.php:58
+#: Controller/StatutController.php:82
+msgid "The statut could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/StatutController.php:99
+msgid "The statut has been deleted."
+msgstr ""
+
+#: Controller/StatutController.php:101
+msgid "The statut could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:88
+#: Controller/UsersController.php:119
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:92
+#: Controller/UsersController.php:123
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:142
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:144
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:159
+msgid "missing parameter"
+msgstr ""
+
+#: Controller/UsersController.php:196
+msgid "Thank you"
+msgstr ""
+
+#: Controller/UsersController.php:200
+msgid "The confirmation could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:207
+msgid "Confirm your email"
+msgstr ""
+
+#: Template/Emails/index.ctp:1
+msgid "sent"
+msgstr ""
+
+#: Template/Employees/add.ctp:9
+#: Template/Employees/edit.ctp:9
+#: Template/Employees/index.ctp:9
+#: Template/Employees/index.ctp:37
+#: Template/Employees/view.ctp:9
+#: Template/Employees/view.ctp:80
+#: Template/Employees/view.ctp:127
+#: Template/Files/add.ctp:9
+#: Template/Files/edit.ctp:9
+#: Template/Files/index.ctp:9
+#: Template/Files/index.ctp:26
+#: Template/Files/view.ctp:9
+#: Template/Files/view.ctp:62
+#: Template/Roles/add.ctp:9
+#: Template/Roles/edit.ctp:9
+#: Template/Roles/index.ctp:9
+#: Template/Roles/index.ctp:23
+#: Template/Roles/view.ctp:9
+#: Template/Roles/view.ctp:46
+#: Template/Schedules/add.ctp:9
+#: Template/Schedules/edit.ctp:9
+#: Template/Schedules/index.ctp:9
+#: Template/Schedules/index.ctp:24
+#: Template/Schedules/view.ctp:9
+#: Template/Statut/add.ctp:9
+#: Template/Statut/edit.ctp:9
+#: Template/Statut/index.ctp:9
+#: Template/Statut/index.ctp:25
+#: Template/Statut/view.ctp:9
+#: Template/Statut/view.ctp:53
+#: Template/Users/add.ctp:9
+#: Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9
+#: Template/Users/index.ctp:26
+#: Template/Users/view.ctp:9
+#: Template/Users/view.ctp:58
+msgid "Actions"
+msgstr ""
+
+#: Template/Employees/add.ctp:10
+#: Template/Employees/edit.ctp:16
+#: Template/Employees/view.ctp:12
+#: Template/Files/add.ctp:11
+#: Template/Files/edit.ctp:17
+#: Template/Files/index.ctp:11
+#: Template/Files/view.ctp:14
+#: Template/Roles/add.ctp:11
+#: Template/Roles/edit.ctp:17
+#: Template/Roles/index.ctp:11
+#: Template/Roles/view.ctp:14
+#: Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:11
+#: Template/Users/view.ctp:14
+msgid "List Employees"
+msgstr ""
+
+#: Template/Employees/add.ctp:11
+#: Template/Employees/edit.ctp:17
+#: Template/Employees/index.ctp:11
+#: Template/Statut/add.ctp:11
+#: Template/Statut/edit.ctp:17
+#: Template/Statut/index.ctp:11
+#: Template/Statut/view.ctp:14
+#: Template/Users/add.ctp:10
+#: Template/Users/edit.ctp:17
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr ""
+
+#: Template/Employees/add.ctp:12
+#: Template/Employees/edit.ctp:18
+#: Template/Employees/index.ctp:12
+#: Template/Statut/add.ctp:12
+#: Template/Statut/edit.ctp:18
+#: Template/Statut/index.ctp:12
+#: Template/Statut/view.ctp:15
+#: Template/Users/index.ctp:10
+#: Template/Users/view.ctp:13
+msgid "New User"
+msgstr ""
+
+#: Template/Employees/add.ctp:13
+#: Template/Employees/edit.ctp:19
+#: Template/Employees/index.ctp:13
+#: Template/Employees/view.ctp:14
+#: Template/Schedules/add.ctp:10
+#: Template/Schedules/edit.ctp:16
+#: Template/Schedules/view.ctp:12
+msgid "List Schedules"
+msgstr ""
+
+#: Template/Employees/add.ctp:14
+#: Template/Employees/edit.ctp:20
+#: Template/Employees/index.ctp:14
+#: Template/Employees/view.ctp:19
+#: Template/Schedules/index.ctp:10
+#: Template/Schedules/view.ctp:13
+msgid "New Schedule"
+msgstr ""
+
+#: Template/Employees/add.ctp:15
+#: Template/Employees/edit.ctp:21
+#: Template/Employees/index.ctp:15
+#: Template/Employees/view.ctp:31
+#: Template/Roles/add.ctp:10
+#: Template/Roles/edit.ctp:16
+#: Template/Roles/view.ctp:12
+msgid "List Roles"
+msgstr ""
+
+#: Template/Employees/add.ctp:16
+#: Template/Employees/edit.ctp:22
+#: Template/Employees/index.ctp:16
+#: Template/Employees/view.ctp:25
+#: Template/Roles/index.ctp:10
+#: Template/Roles/view.ctp:13
+msgid "New Role"
+msgstr ""
+
+#: Template/Employees/add.ctp:17
+#: Template/Employees/edit.ctp:23
+#: Template/Employees/index.ctp:17
+#: Template/Employees/view.ctp:33
+#: Template/Files/add.ctp:10
+#: Template/Files/edit.ctp:16
+#: Template/Files/view.ctp:12
+msgid "List Files"
+msgstr ""
+
+#: Template/Employees/add.ctp:18
+#: Template/Employees/edit.ctp:24
+#: Template/Employees/index.ctp:18
+#: Template/Employees/view.ctp:34
+#: Template/Files/index.ctp:10
+#: Template/Files/view.ctp:13
+msgid "New File"
+msgstr ""
+
+#: Template/Employees/add.ctp:24
+msgid "Add Employee"
+msgstr ""
+
+#: Template/Employees/add.ctp:44
+#: Template/Employees/edit.ctp:49
+#: Template/Files/add.ctp:26
+#: Template/Files/edit.ctp:32
+#: Template/Roles/add.ctp:26
+#: Template/Roles/edit.ctp:31
+#: Template/Schedules/add.ctp:26
+#: Template/Schedules/edit.ctp:32
+#: Template/Statut/add.ctp:24
+#: Template/Statut/edit.ctp:30
+#: Template/Users/add.ctp:25
+#: Template/Users/edit.ctp:32
+msgid "Submit"
+msgstr ""
+
+#: Template/Employees/edit.ctp:11
+#: Template/Employees/index.ctp:54
+#: Template/Employees/view.ctp:92
+#: Template/Employees/view.ctp:141
+#: Template/Files/edit.ctp:11
+#: Template/Files/index.ctp:41
+#: Template/Files/view.ctp:79
+#: Template/Roles/edit.ctp:11
+#: Template/Roles/index.ctp:35
+#: Template/Roles/view.ctp:63
+#: Template/Schedules/edit.ctp:11
+#: Template/Schedules/index.ctp:39
+#: Template/Statut/edit.ctp:11
+#: Template/Statut/index.ctp:39
+#: Template/Statut/view.ctp:66
+#: Template/Users/edit.ctp:12
+#: Template/Users/index.ctp:41
+#: Template/Users/view.ctp:76
+msgid "Delete"
+msgstr ""
+
+#: Template/Employees/edit.ctp:13
+#: Template/Employees/index.ctp:54
+#: Template/Employees/view.ctp:11
+#: Template/Employees/view.ctp:92
+#: Template/Employees/view.ctp:141
+#: Template/Files/edit.ctp:13
+#: Template/Files/index.ctp:41
+#: Template/Files/view.ctp:11
+#: Template/Files/view.ctp:79
+#: Template/Roles/edit.ctp:13
+#: Template/Roles/index.ctp:35
+#: Template/Roles/view.ctp:11
+#: Template/Roles/view.ctp:63
+#: Template/Schedules/edit.ctp:13
+#: Template/Schedules/index.ctp:39
+#: Template/Schedules/view.ctp:11
+#: Template/Statut/edit.ctp:13
+#: Template/Statut/index.ctp:39
+#: Template/Statut/view.ctp:11
+#: Template/Statut/view.ctp:66
+#: Template/Users/edit.ctp:14
+#: Template/Users/index.ctp:41
+#: Template/Users/view.ctp:11
+#: Template/Users/view.ctp:76
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Employees/edit.ctp:30
+#: Template/Employees/view.ctp:10
+msgid "Edit Employee"
+msgstr ""
+
+#: Template/Employees/index.ctp:10
+#: Template/Employees/view.ctp:13
+#: Template/Files/add.ctp:12
+#: Template/Files/edit.ctp:18
+#: Template/Files/index.ctp:12
+#: Template/Files/view.ctp:15
+#: Template/Roles/add.ctp:12
+#: Template/Roles/edit.ctp:18
+#: Template/Roles/index.ctp:12
+#: Template/Roles/view.ctp:15
+#: Template/Users/add.ctp:12
+#: Template/Users/edit.ctp:19
+#: Template/Users/index.ctp:12
+#: Template/Users/view.ctp:15
+msgid "New Employee"
+msgstr ""
+
+#: Template/Employees/index.ctp:22
+msgid "Employees"
+msgstr ""
+
+#: Template/Employees/index.ctp:52
+#: Template/Employees/view.ctp:90
+#: Template/Employees/view.ctp:139
+#: Template/Files/index.ctp:39
+#: Template/Files/view.ctp:77
+#: Template/Roles/index.ctp:33
+#: Template/Roles/view.ctp:61
+#: Template/Schedules/index.ctp:37
+#: Template/Statut/index.ctp:37
+#: Template/Statut/view.ctp:64
+#: Template/Users/index.ctp:39
+#: Template/Users/view.ctp:74
+msgid "View"
+msgstr ""
+
+#: Template/Employees/index.ctp:53
+#: Template/Employees/view.ctp:91
+#: Template/Employees/view.ctp:140
+#: Template/Files/index.ctp:40
+#: Template/Files/view.ctp:78
+#: Template/Roles/index.ctp:34
+#: Template/Roles/view.ctp:62
+#: Template/Schedules/index.ctp:38
+#: Template/Statut/index.ctp:38
+#: Template/Statut/view.ctp:65
+#: Template/Users/index.ctp:40
+#: Template/Users/view.ctp:75
+msgid "Edit"
+msgstr ""
+
+#: Template/Employees/index.ctp:62
+#: Template/Files/index.ctp:49
+#: Template/Roles/index.ctp:43
+#: Template/Schedules/index.ctp:47
+#: Template/Statut/index.ctp:47
+#: Template/Users/index.ctp:49
+msgid "first"
+msgstr ""
+
+#: Template/Employees/index.ctp:63
+#: Template/Files/index.ctp:50
+#: Template/Roles/index.ctp:44
+#: Template/Schedules/index.ctp:48
+#: Template/Statut/index.ctp:48
+#: Template/Users/index.ctp:50
+msgid "previous"
+msgstr ""
+
+#: Template/Employees/index.ctp:65
+#: Template/Files/index.ctp:52
+#: Template/Roles/index.ctp:46
+#: Template/Schedules/index.ctp:50
+#: Template/Statut/index.ctp:50
+#: Template/Users/index.ctp:52
+msgid "next"
+msgstr ""
+
+#: Template/Employees/index.ctp:66
+#: Template/Files/index.ctp:53
+#: Template/Roles/index.ctp:47
+#: Template/Schedules/index.ctp:51
+#: Template/Statut/index.ctp:51
+#: Template/Users/index.ctp:53
+msgid "last"
+msgstr ""
+
+#: Template/Employees/index.ctp:68
+#: Template/Files/index.ctp:55
+#: Template/Roles/index.ctp:49
+#: Template/Schedules/index.ctp:53
+#: Template/Statut/index.ctp:53
+#: Template/Users/index.ctp:55
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: Template/Employees/view.ctp:11
+msgid "Delete Employee"
+msgstr ""
+
+#: Template/Employees/view.ctp:41
+#: Template/Files/view.ctp:53
+#: Template/Roles/view.ctp:37
+msgid "First Name"
+msgstr ""
+
+#: Template/Employees/view.ctp:45
+#: Template/Files/view.ctp:54
+#: Template/Roles/view.ctp:38
+msgid "Last Name"
+msgstr ""
+
+#: Template/Employees/view.ctp:49
+#: Template/Files/view.ctp:55
+#: Template/Roles/view.ctp:39
+#: Template/Users/view.ctp:51
+msgid "Gender"
+msgstr ""
+
+#: Template/Employees/view.ctp:53
+#: Template/Files/view.ctp:56
+#: Template/Roles/view.ctp:40
+msgid "Date Started Employement"
+msgstr ""
+
+#: Template/Employees/view.ctp:57
+#: Template/Files/view.ctp:57
+#: Template/Roles/view.ctp:41
+msgid "Date Left Employement"
+msgstr ""
+
+#: Template/Employees/view.ctp:61
+#: Template/Employees/view.ctp:79
+#: Template/Employees/view.ctp:125
+#: Template/Files/view.ctp:39
+#: Template/Files/view.ctp:59
+#: Template/Roles/view.ctp:43
+#: Template/Statut/view.ctp:38
+#: Template/Statut/view.ctp:51
+#: Template/Users/view.ctp:38
+#: Template/Users/view.ctp:57
+msgid "Modified"
+msgstr ""
+
+#: Template/Employees/view.ctp:65
+#: Template/Employees/view.ctp:78
+#: Template/Employees/view.ctp:126
+#: Template/Files/view.ctp:35
+#: Template/Files/view.ctp:60
+#: Template/Roles/view.ctp:44
+#: Template/Statut/view.ctp:34
+#: Template/Statut/view.ctp:50
+#: Template/Users/view.ctp:34
+#: Template/Users/view.ctp:56
+msgid "Created"
+msgstr ""
+
+#: Template/Employees/view.ctp:71
+msgid "Related Roles"
+msgstr ""
+
+#: Template/Employees/view.ctp:76
+#: Template/Roles/view.ctp:22
+msgid "Role Name"
+msgstr ""
+
+#: Template/Employees/view.ctp:77
+#: Template/Roles/view.ctp:26
+msgid "Role Description"
+msgstr ""
+
+#: Template/Employees/view.ctp:100
+msgid "Related Files"
+msgstr ""
+
+#: Template/Employees/view.ctp:116
+msgid "Related Schedules"
+msgstr ""
+
+#: Template/Employees/view.ctp:121
+msgid "Name Schedule"
+msgstr ""
+
+#: Template/Employees/view.ctp:122
+#: Template/Schedules/view.ctp:24
+msgid "Schedule Description"
+msgstr ""
+
+#: Template/Employees/view.ctp:123
+#: Template/Schedules/view.ctp:28
+msgid "Schedule End Date Time"
+msgstr ""
+
+#: Template/Employees/view.ctp:124
+#: Template/Schedules/view.ctp:32
+msgid "Schedule Start Date Time"
+msgstr ""
+
+#: Template/Files/add.ctp:18
+msgid "Add File"
+msgstr ""
+
+#: Template/Files/edit.ctp:24
+#: Template/Files/view.ctp:10
+msgid "Edit File"
+msgstr ""
+
+#: Template/Files/index.ctp:16
+msgid "Files"
+msgstr ""
+
+#: Template/Files/view.ctp:11
+msgid "Delete File"
+msgstr ""
+
+#: Template/Files/view.ctp:22
+#: Template/Statut/view.ctp:22
+msgid "Name"
+msgstr ""
+
+#: Template/Files/view.ctp:26
+msgid "Path"
+msgstr ""
+
+#: Template/Files/view.ctp:43
+msgid "Status"
+msgstr ""
+
+#: Template/Files/view.ctp:44
+msgid "Yes"
+msgstr ""
+
+#: Template/Files/view.ctp:44
+msgid "No"
+msgstr ""
+
+#: Template/Files/view.ctp:48
+#: Template/Roles/view.ctp:32
+#: Template/Users/view.ctp:43
+msgid "Related Employees"
+msgstr ""
+
+#: Template/Layout/error.ctp:36
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:44
+msgid "Back"
+msgstr ""
+
+#: Template/Roles/add.ctp:18
+msgid "Add Role"
+msgstr ""
+
+#: Template/Roles/edit.ctp:24
+#: Template/Roles/view.ctp:10
+msgid "Edit Role"
+msgstr ""
+
+#: Template/Roles/index.ctp:16
+msgid "Roles"
+msgstr ""
+
+#: Template/Roles/view.ctp:11
+msgid "Delete Role"
+msgstr ""
+
+#: Template/Schedules/add.ctp:16
+msgid "Add Schedule"
+msgstr ""
+
+#: Template/Schedules/edit.ctp:22
+#: Template/Schedules/view.ctp:10
+msgid "Edit Schedule"
+msgstr ""
+
+#: Template/Schedules/index.ctp:14
+msgid "Schedules"
+msgstr ""
+
+#: Template/Schedules/view.ctp:11
+msgid "Delete Schedule"
+msgstr ""
+
+#: Template/Schedules/view.ctp:20
+msgid "Name schedule"
+msgstr ""
+
+#: Template/Schedules/view.ctp:36
+msgid "modified"
+msgstr ""
+
+#: Template/Schedules/view.ctp:40
+msgid "created"
+msgstr ""
+
+#: Template/Statut/add.ctp:10
+#: Template/Statut/edit.ctp:16
+#: Template/Statut/view.ctp:12
+msgid "List Statut"
+msgstr ""
+
+#: Template/Statut/add.ctp:18
+msgid "Add Statut"
+msgstr ""
+
+#: Template/Statut/edit.ctp:24
+#: Template/Statut/view.ctp:10
+msgid "Edit Statut"
+msgstr ""
+
+#: Template/Statut/index.ctp:10
+#: Template/Statut/view.ctp:13
+msgid "New Statut"
+msgstr ""
+
+#: Template/Statut/index.ctp:16
+msgid "Statut"
+msgstr ""
+
+#: Template/Statut/view.ctp:11
+msgid "Delete Statut"
+msgstr ""
+
+#: Template/Statut/view.ctp:26
+msgid "Description"
+msgstr ""
+
+#: Template/Statut/view.ctp:30
+#: Template/Statut/view.ctp:47
+#: Template/Users/view.ctp:30
+#: Template/Users/view.ctp:47
+msgid "Id"
+msgstr ""
+
+#: Template/Statut/view.ctp:43
+msgid "Related Users"
+msgstr ""
+
+#: Template/Statut/view.ctp:48
+#: Template/Users/view.ctp:22
+msgid "Email"
+msgstr ""
+
+#: Template/Statut/view.ctp:49
+#: Template/Users/view.ctp:26
+msgid "Password"
+msgstr ""
+
+#: Template/Statut/view.ctp:52
+msgid "Statut Id"
+msgstr ""
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr ""
+
+#: Template/Users/edit.ctp:25
+#: Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/index.ctp:16
+msgid "Users"
+msgstr ""
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/view.ctp:48
+msgid "User Id"
+msgstr ""
+
+#: Template/Users/view.ctp:49
+msgid "First_Name"
+msgstr ""
+
+#: Template/Users/view.ctp:50
+msgid "Last_Name"
+msgstr ""
+
+#: Template/Users/view.ctp:52
+msgid "Date_Started_Employement"
+msgstr ""
+
+#: Template/Users/view.ctp:53
+msgid "Date_Left_Employement"
+msgstr ""
+
+#: Template/Users/view.ctp:54
+msgid "Slug"
+msgstr ""
+
+#: Template/Users/view.ctp:55
+msgid "Published"
+msgstr ""
+
