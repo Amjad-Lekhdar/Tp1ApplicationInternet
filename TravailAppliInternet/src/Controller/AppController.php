@@ -87,7 +87,7 @@ class AppController extends Controller
     return false;
     }
     
-    public function changeLang($lang = 'fr_CA') {
+    public function changeLang($lang = 'en_US') {
     I18n::setLocale($lang);
     $this->request->session()->write('Config.language', $lang);
     return $this->redirect($this->request->referer());

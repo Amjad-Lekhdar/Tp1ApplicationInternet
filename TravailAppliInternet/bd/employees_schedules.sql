@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  sam. 17 oct. 2020 à 21:19
+-- Généré le :  lun. 19 oct. 2020 à 18:17
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.11
 
@@ -47,8 +47,9 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`id`, `First_Name`, `Last_Name`, `Gender`, `Date_Started_Employement`, `Date_Left_Employement`, `user_id`, `modified`, `created`, `slug`, `published`) VALUES
-(35, 'Amjad', 'Lekhdar', 'Masculin', '2020-10-17', '2023-10-17', 11, '2020-10-17 19:00:12', '2020-10-17 19:00:12', 'Amjad', 0),
-(36, 'Kenny', 'Linh', 'Masculin', '2020-10-17', '2025-10-17', 11, '2020-10-17 19:15:28', '2020-10-17 19:15:28', 'Kenny', 0);
+(35, 'Amjad', 'Lekhdar', 'Masculin', '2020-10-17', '2023-10-17', 11, '2020-10-18 15:28:27', '2020-10-17 19:00:12', 'Amjad', 0),
+(36, 'Kenny', 'Linh', 'Masculin', '2020-10-17', '2025-10-17', 11, '2020-10-18 15:34:35', '2020-10-17 19:15:28', 'Kenny', 0),
+(37, 'Rayane', 'El-mekari', 'Féminin', '2020-10-18', '2024-10-18', 11, '2020-10-18 15:34:24', '2020-10-18 15:28:17', 'Rayane', 0);
 
 -- --------------------------------------------------------
 
@@ -62,6 +63,15 @@ CREATE TABLE `employees_files` (
   `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `employees_files`
+--
+
+INSERT INTO `employees_files` (`id`, `employee_id`, `file_id`) VALUES
+(2, 37, 8),
+(3, 35, 7),
+(4, 36, 7);
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +82,15 @@ CREATE TABLE `employees_roles` (
   `role_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `employees_roles`
+--
+
+INSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES
+(8, 35),
+(8, 36),
+(8, 37);
 
 -- --------------------------------------------------------
 
@@ -88,6 +107,14 @@ CREATE TABLE `files` (
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Déchargement des données de la table `files`
+--
+
+INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
+(7, 'iconeHomme.jpg', 'files/add/', '2020-10-18 14:29:50', '2020-10-18 14:29:50', 1),
+(8, 'iconeFemme.jpg', 'files/add/', '2020-10-18 15:26:30', '2020-10-18 15:26:30', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -102,6 +129,14 @@ CREATE TABLE `i18n` (
   `field` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `content` text COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `i18n`
+--
+
+INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
+(1, 'en_US', 'Roles', 1, 'Role_Name', 'Analyst Programmer\r\n'),
+(2, 'en_US', 'Roles', 1, 'Role_Description', 'MySQL code management');
 
 -- --------------------------------------------------------
 
@@ -122,7 +157,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`Role_id`, `Role_Name`, `Role_Description`, `created`, `modified`) VALUES
-(6, 'Analyste Programmeur', 'Gestion du code MySQL', '2020-10-17 19:33:25', '2020-10-17 19:33:25');
+(8, 'Analyste Programmeur ', 'Gestion du code MySQL', '2020-10-18 14:25:22', '2020-10-18 14:25:22');
 
 -- --------------------------------------------------------
 
@@ -182,15 +217,18 @@ CREATE TABLE `users` (
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
-  `statut_id` int(11) NOT NULL
+  `statut_id` int(11) NOT NULL,
+  `uuid` varchar(255) NOT NULL,
+  `confirmed` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `created`, `modified`, `statut_id`) VALUES
-(11, 'admin@admin.com', '$2y$10$x2k4nI378Ryx2.RO.lKzHul1L214EDQHXK/KKKpfBXholR1fYbOgy', '2020-10-17 18:06:16', '2020-10-17 18:06:16', 1);
+INSERT INTO `users` (`id`, `email`, `password`, `created`, `modified`, `statut_id`, `uuid`, `confirmed`) VALUES
+(11, 'admin@admin.com', '$2y$10$uThze3W4Ld46yn34zhkeguJQbWzZ2r/VgX/OosN7zvBjZX.5ZG8Ua', '2020-10-17 18:06:16', '2020-10-18 21:57:49', 1, 'a91aca2b-e818-449a-a871-ee37ba632aae', 0),
+(13, '1804139@cmontmorency.qc.ca', '$2y$10$OWJz1k/5z0/bfTpqg3uq1OoGYvVu/0viMvPFs.K0NF56c1eDQL1ha', '2020-10-18 22:37:39', '2020-10-18 22:37:39', 1, '60739b30-b5f4-41c1-b933-72480a84a79c', 0);
 
 --
 -- Index pour les tables déchargées
@@ -266,31 +304,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT pour la table `employees_files`
 --
 ALTER TABLE `employees_files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `i18n`
 --
 ALTER TABLE `i18n`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `Role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `schedules`
@@ -308,7 +346,7 @@ ALTER TABLE `statut`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Contraintes pour les tables déchargées
